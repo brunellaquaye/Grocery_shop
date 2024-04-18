@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery shop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"
+  ></script>
+</head>
+<body>
+
+    <div class="container min-h-screen  min-w-full bg-[url('image.png')] bg-center bg-cover px-18 py-5 relative">
+
+        <!-- Medium and big screens nav bar -->
+        <nav class="flex justify-between">
+            <img src="logo.png" class="w-40 cursor-pointer"/>
+            <ul class="hidden md:text-white md:flex md:gap-10 md:items-center ">
+                <li class="hover:bg-yellow-400 rounded-md px-2 py-2"><a href="#">Home</a></li>
+                <li class="hover:bg-yellow-400 rounded-md px-2 py-2"><a href="#">About</a></li>
+                <li class="hover:bg-yellow-400 rounded-md px-2 py-2"><a href="#">Features</a></li>
+                <li class="hover:bg-yellow-400 rounded-md px-2 py-2"><a href="#">Contact</a></li>
+                <img src="cart.png" class=" md:w-8 md:cursor-pointer"/>
+
+            </ul>
+            <!-- <img src="cart.png" class=" md:w-8 md:cursor-pointer"/> -->
+            <button class=" menu_icon text-white flex items-center md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                  
+            </button>
+        </nav>
+        <!-- Small screens nav bar -->
+        <nav>
+            <div class=" menu_items md:hidden">
+                <ul class="text-white ">
+                    <li class="px-4 py-4 justify-center  text-sm hover:bg-yellow-400 hover:text-black flex "><a href="#">Home</a></li>
+                    <li class="px-4 py-4 justify-center  text-sm hover:bg-yellow-400 hover:text-black flex "><a href="#">About</a></li>
+                    <li class="px-4 py-4 justify-center  text-sm hover:bg-yellow-400 hover:text-black flex "><a href="#">Features</a></li>
+                    <li class="px-4 py-4 justify-center  text-sm hover:bg-yellow-400 hover:text-black flex "><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <script>
+        const btn = document.querySelector(".menu_icon");
+        const menu = document.querySelector(".menu_items");
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        })
+        
+    </script>
+</body>
